@@ -81,8 +81,8 @@ resource "aws_db_instance" "mysql_standalone" {
   maintenance_window         = "Mon:05:00-Mon:08:00" # 自動更新などのメンテナンスを行う時間帯。バックアップを先にしておくこと
   auto_minor_version_upgrade = false
 
-  deletion_protection = true
-  skip_final_snapshot = false # インスタンス削除時にスナップショットを取るかどうか
+  deletion_protection = false
+  skip_final_snapshot = true # インスタンス削除時にスナップショットを取るかどうか
 
   apply_immediately = true
 
