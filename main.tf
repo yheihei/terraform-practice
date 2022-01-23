@@ -9,6 +9,12 @@ terraform {
       version = "~> 3.0"
     }
   }
+  backend "s3" {
+    bucket  = "tastylog-tfstate-bucket-kokubo"
+    key     = "tastylog-dev.tfstate" # 変数化できない
+    region  = "ap-northeast-1"
+    profile = "terraform" # IAMユーザー
+  }
 }
 
 # ----------------------------------
