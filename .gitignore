@@ -38,4 +38,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# keypari
+tastylog-dev-keypair.pem
+
 # End of https://www.toptal.com/developers/gitignore/api/terraform
